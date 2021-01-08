@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section>
+        <div class="circle">
+
+        </div>
+        <header class="header">
+            <a href="#" class="logo"><img src="./images/logo.png" alt=""></a>
+            <ul class="header__nav">
+                <li><a class="nav__item" href="#">Home</a></li>
+                <li><a class="nav__item" href="#">Menu</a></li>
+                <li><a class="nav__item" href="#">What's New</a></li>
+                <li><a class="nav__item" href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="text__box">
+                <h2 class="content__title">It's not just a coffee<br>
+                    It's <span class="title__span">Starbucks</span></h2>
+                <p class="content__description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, voluptatibus. Enim iste provident
+                    doloremque voluptas quibusdam inventore? Tenetur hic aspernatur sed? Explicabo repellendus iste in
+                    animi necessitatibus sit voluptate asperiores.
+                </p>
+                <a href="#" class="content__link">Learn more</a>
+            </div>
+            <div class="content__img">
+                <img class="img__box" src="./images/img1.png" alt="">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li class="thumb__item"><img class="thumb__img" onclick="imgSlider('./images/img1.png'); changeCircleColor('#017143')" src="./images/thumb1.png"></li>
+            <li class="thumb__item"><img class="thumb__img" onclick="imgSlider('./images/img2.png'); changeCircleColor('#eb7495')" src="./images/thumb2.png"></li>
+            <li class="thumb__item"><img class="thumb__img" onclick="imgSlider('./images/img3.png'); changeCircleColor('#d752b1')" src="./images/thumb3.png"></li>
+        </ul>
+        <ul class="social">
+            <li><a href="#" class="social__item"><img class="social__img" src="./images/facebook.png" alt=""></a></li>
+            <li><a href="#" class="social__item"><img class="social__img" src="./images/instagram.png" alt=""></a></li>
+            <li><a href="#" class="social__item"><img class="social__img" src="./images/twitter.png" alt=""></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.img__box').src=anything
+        }
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+
+</body>
+
+</html>
